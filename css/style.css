@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); 
 *
 {
     padding: 0;
@@ -7,4 +8,72 @@
     list-style: none;
     background-repeat: no-repeat;
     color: #222222;
+    font-family: 'Noto Sans KR', sans-serif;
 }
+.wrapper
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.remain_box
+{
+}
+.main_container
+{
+    height: 160px;
+    width: 280px;
+}
+.remain_box:after,
+.remain_box:before
+{
+    position: absolute;
+    
+    content: attr(data-content);
+    font-size: 100pt;
+    font-weight: bolder;
+    overflow: hidden;
+}
+.remain_box:after
+{
+    width: 280px;
+    height: 100px;
+    color: #222222;
+}
+.remain_box:before
+{
+    width: 280px;
+    height: 160px;
+    /* color: red; */
+    background: linear-gradient(349deg, rgba(255,0,193,1) 0%, rgba(255,0,0,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* .remain_box::before
+.remain_box::after
+{
+    width: 50%;
+    position: relative;
+    height: 50%;
+    font-size: 100pt;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    content: "test";
+}
+.remain_box::before
+{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+}
+.remain_box::after
+{
+    width: 100%;
+    height: 50%;
+    background-color: red;
+} */
