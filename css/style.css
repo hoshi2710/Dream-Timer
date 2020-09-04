@@ -9,6 +9,7 @@
     background-repeat: no-repeat;
     color: #222222;
     font-family: 'Noto Sans KR', sans-serif;
+    outline: none;
 }
 .wrapper
 {
@@ -19,13 +20,23 @@
     justify-content: center; 
     align-items: center;
 }
+nav
+{
+    position: absolute;
+    padding: 15px;
+    z-index: 998;
+}
 
 .main_container
 {
     height: 160px;
     width: 280px;
     transform: scale(1.5);
-   
+    z-index: 997;
+}
+.remain_box
+{
+    transition: 0.3s;
 }
 .remain_box:after,
 .remain_box:before
@@ -39,13 +50,29 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-   
 }
 .remain_box:after
 {
     width: 280px;
     height: 80px;
     color: #222222;
+}
+.control_menu
+{
+    transition: 0.5s;
+    cursor: pointer;
+    width: 280px;
+    height: 120px;
+    margin-top: 50px;
+    position: absolute;
+    background-color: transparent;
+    opacity: 0.5;
+    z-index: 998;
+    /* transform: scale(1.5); */
+}
+.control_menu:hover
+{
+   background-color: #ffffff;  
 }
 .remain_box:before
 {
@@ -54,4 +81,107 @@
     background: linear-gradient(349deg, rgba(255,0,193,1) 0%, rgba(255,0,0,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.setting
+{
+    background-image: url("../images/light/settings.png");
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 40px 40px;
+    background-position: 5px,5px;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.setting:hover
+{
+    background-color: #f0f0f0;
+}
+.setting:active
+{
+    background-color: #cacaca;
+}
+
+.dim
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0000002f;
+    z-index: 999;
+    display: none;
+}
+.popup_setting_time
+{
+    width: 500px;
+    height: 245px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+    padding: 20px;
+    transition: 0.2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    display: none;
+}
+.time_setting_popup_contents > *
+{
+    display: block;
+    float: left;
+    width: 230px;
+}
+.time_setting_popup_contents input[type="number"]
+{
+    width: 95%;
+    margin-top: 5px;
+    font-size: 15pt;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid gray;
+}
+.time_setting_popup_contents input[type="number"]:focus
+{
+    border-bottom: 2px solid #2196f3;
+}
+.popup_setting_time input.apply_time
+{
+    float: right;
+    margin-right: 13px;
+    margin-top: 20px;
+    width: 125px;
+    height: 45px;
+    border-radius: 40px;
+    background-color: #2196f3;
+    border: 1px solid #2196f3;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s;
+}
+.popup_setting_time input.cancel_time
+{
+    float: right;
+    margin-right: 13px;
+    margin-top: 20px;
+    width: 125px;
+    height: 45px;
+    border-radius: 40px;
+    background-color: #aaaaaa;
+    border: 1px solid #aaaaaa;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s;
+} 
+.popup_setting_time input.cancel_time:hover
+{
+    background-color: #ffffff;
+    color: #aaaaaa;
+}
+.popup_setting_time input.apply_time:hover
+{
+    background-color: white;
+    color: #2196f3;
 }

@@ -7,11 +7,38 @@
     <title>Dream Timer</title>
 </head>
 <body>
+    <div class="dim">
+        <div class="popup_setting_time">
+            <h1>시간 설정</h1>
+            <div class="time_setting_popup_contents">
+                <div>
+                    <h3>공부시간</h3>
+                    <input type="number" min="1" max="10" placeholder="시간 단위로 입력(1-10)">
+                </div>
+                <div>
+                    <h3>휴식시간</h3>
+                    <input type="number" min="0" max="60" placeholder="분 단위로 입력(0-60)">
+                </div>                
+            </div>
+            <input type="button" class="apply_time" value="적용">
+            <input type="button" class="cancel_time" value="취소">
+            
+        </div>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a class="setting"></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </nav>
     <div class="wrapper">
         <div class="main_container">
+            <div class="control_menu"></div>
             <div class="remain_box" data-content="1:00">     
             </div> 
         </div>
+       
     </div>
 
     
